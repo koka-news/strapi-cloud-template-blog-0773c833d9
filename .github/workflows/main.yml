@@ -1,0 +1,15 @@
+name: Keep Strapi Awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # 每 10 分钟执行一次（UTC 时间）
+  workflow_dispatch:       # 允许手动触发
+
+jobs:
+  curl-strapi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send request to Strapi API
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://precious-happiness-fc014e0773.strapiapp.com/api/articles
