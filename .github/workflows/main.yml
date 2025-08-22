@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Send request to Strapi API
         run: |
-          curl -s -o /dev/null -w "%{http_code}" https://precious-happiness-fc014e0773.strapiapp.com/api/articles
+          curl -s -o /dev/null -w "%{http_code}" https://fortunate-thrill-31a3d0a830.strapiapp.com/api/articles
